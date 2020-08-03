@@ -1,2 +1,2 @@
 # colloid_char
-Framework for characterizing colloidal self-assembly system states
+Characterizing colloidal self-assembly states
