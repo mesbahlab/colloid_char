@@ -1,8 +1,11 @@
 # colloid_char
 The provided scripts implement a three-step framework for colloidal self-assembly state characterization as described in "Deep learning for characterizing the time evolution of three-dimensional colloidal self-assembly systems" (O'Leary, et al., 2020) The first step establishes neighborhood graphs with a precise methodology that has been shown to be robust to thermal fluctuations and capable of describing complex topologies. The second step uses deep learning techniques to reduce the dimensionality of the neighborhood graphs. The third step employs agglomerative hierarchical clustering to partition the low-dimensional space and assign physically meaningful classifications to the resulting partitions.Each of the provided scripts is described briefly below. Please feel free to email any and all questions about using these scripts to jared.oleary@berkeley.edu
 
+# Neighborhood graph construction
+The crayon package provided at "https://github.com/wfreinhart/crayon.git" will output neigbhorhood graphs from XYZ files that describe particle positions. Crayon is a python plugin for performing Neighborhood Graph Analysis (NGA) via graphlet decomposition for autonomous crystal structure comparison on molecular simulation snapshots. It wraps the libgraphlet library, which in turn wraps [Orca](http://www.biolab.si/supp/orca/orca.html), based on the following paper: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2623288/ (Milenkoviæ, Tijana, and Nataša Pržulj. "Uncovering biological network function via graphlet degree signatures." Cancer informatics 6 (2008): 257.)
+
 # Read_GDV.py 
-The package provided by "" will output neigbhorhood graphs from XYZ files that describe particle positions. These neighborhood graphs are output in terms of GDV files. This script extracts the neighborhood graphs from these files.
+ The crayon package outputs GDV files that contain all neighborhood graphs for all particles in input neighborhood graph files. This script extracts neighborhood graphs from these files.
 
 # Combine_GDV.py
 This script combines neighborhood graphs extracted from different GDV files and records the unique neighborhood graphs among them only. The script then weighs and normalizes each of the neighborhood graphs.
